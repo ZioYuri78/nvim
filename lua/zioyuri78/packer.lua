@@ -30,6 +30,12 @@ return require('packer').startup(function(use)
 		run = ':TSUpdate'
 	}
 
+	use {
+  		'nvim-telescope/telescope.nvim', tag = '0.1.6',
+		-- or                            , branch = '0.1.x',
+  		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
 	use 'ellisonleao/gruvbox.nvim'
 	use 'williamboman/mason.nvim'
 	use 'williamboman/mason-lspconfig.nvim'
@@ -38,7 +44,6 @@ return require('packer').startup(function(use)
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'L3MON4D3/LuaSnip'
 
-	-- use 'foo2/bar2.nvim'
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
