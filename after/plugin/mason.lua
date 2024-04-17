@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup {
-	ensure_installed = {"lua_ls", "clangd", "pyright"}
+	ensure_installed = {"lua_ls", "clangd", "pyright", "cmake"}
 }
 
 local lsp_on_attach = function(_,_)
@@ -38,8 +38,12 @@ require("lspconfig").clangd.setup {
 	capabilities = lsp_capabilities,
 }
 
-
 require("lspconfig").pyright.setup {
+	on_attach = lsp_on_attach,
+	capabilities = lsp_capabilities,
+}
+
+require("lspconfig").cmake.setup {
 	on_attach = lsp_on_attach,
 	capabilities = lsp_capabilities,
 }
