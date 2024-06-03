@@ -11,3 +11,12 @@ vim.opt.splitbelow = true
 vim.diagnostic.config({
 	virtual_text = false
 })
+
+--VimLeave,VimSuspend * set guicursor=a:block-blinkon0
+vim.api.nvim_create_autocmd(
+	{"VimLeave","VimSuspend"},
+	{
+		pattern = "*",
+		command = "set guicursor=a:hor20-blinkon500"
+	}
+)
