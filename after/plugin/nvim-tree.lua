@@ -31,4 +31,4 @@ require("nvim-tree").setup()
 
 vim.keymap.set('n', '<C-n>', ':NvimTreeFindFileToggle<CR>', {})
 vim.keymap.set('n', '<C-f>', ':NvimTreeFocus<CR>', {})
-vim.keymap.set('n', '<leader>ga', git_add, opts('Git Add'))
+vim.keymap.set('n', '<leader>ga', git_add, {})
