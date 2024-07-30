@@ -7,6 +7,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = false
 vim.opt.guicursor = "n-v-c:block,i:ver50,a:blinkon500"
 vim.opt.splitbelow = true
+vim.opt.showmode = false
 
 vim.diagnostic.config({
 	virtual_text = false
@@ -20,3 +21,4 @@ vim.api.nvim_create_autocmd(
 		command = "set guicursor=a:hor20-blinkon500"
 	}
 )
+
