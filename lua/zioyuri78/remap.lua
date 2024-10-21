@@ -17,4 +17,4 @@ vim.keymap.set('n', '<C-Left>' 		, 	'<C-W>h')
 vim.keymap.set('n', '<C-Down>'   	, 	'<C-W>j')
 vim.keymap.set('n', '<C-Up>'	   	, 	'<C-W>k')
 vim.keymap.set('n', '<C-Right>'	   	, 	'<C-W>l')
-
+vim.keymap.set('t', '<C-\\>'		, 	'<C-\\><C-n>')
