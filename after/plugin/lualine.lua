@@ -1,5 +1,16 @@
 local custom_gruvbox = require'lualine.themes.gruvbox-material'
 custom_gruvbox.normal.a.bg = '#99AACC'
+--custom_gruvbox.normal.c.bg = '#444499'
+custom_gruvbox.inactive.a.bg = '#66BB99'
+custom_gruvbox.inactive.a.fg = '#222222'
+
+local inactive = function ()
+	return 'inactive'
+end
+
+local clock = function()
+	return os.date('%H:%M')
+end
 
 require('lualine').setup {
   options = {
@@ -23,7 +34,7 @@ require('lualine').setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
+    lualine_c = {'filename', {'datetime', style = '%c'}},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
@@ -34,7 +45,7 @@ require('lualine').setup {
     lualine_c = {'filename'},
     lualine_x = {'location'},
     lualine_y = {},
-    lualine_z = {}
+    lualine_z = {inactive}
   },
   tabline = {},
   winbar = {},
