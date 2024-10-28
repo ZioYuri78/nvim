@@ -44,6 +44,7 @@ return require('packer').startup(function(use)
 	use 'hrsh7th/cmp-nvim-lsp'
     use {
 		"L3MON4D3/LuaSnip",
+		tag = "v2.*",
 		run = "make install_jsregexp"
 	}
 
