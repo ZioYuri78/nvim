@@ -1,7 +1,11 @@
 ---@diagnostic disable: lowercase-global, duplicate-set-field
 
 local ESC = ''
-if _VERSION == 'Lua 5.1' then ESC = '\27' elseif _VERSION == 'Lua 5.4' then ESC = '\x1B' end
+if _VERSION < 'Lua 5.4' then
+	ESC = '\27'
+else
+	ESC = '\x1B'
+end
 
 -- colors table
 text_colors = {}
