@@ -24,12 +24,10 @@ return require('packer').startup(function(use)
 		'nvim-lualine/lualine.nvim',
 		requires = { 'nvim-tree/nvim-web-devicons'}
 	}
-
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
-
 	use {
   		'nvim-telescope/telescope.nvim', tag = '0.1.6',
 		-- or                            , branch = '0.1.x',
@@ -43,13 +41,11 @@ return require('packer').startup(function(use)
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-nvim-lsp'
 
-	---[[
 	use {
 		"L3MON4D3/LuaSnip",
 		tag = "v2.*",
-		run = "cmake install_jsregexp"
+		run = "make install_jsregexp"
 	}
-	--]]
 
 	use {
 		"ckipp01/stylua-nvim"
