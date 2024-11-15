@@ -5,7 +5,7 @@ custom_gruvbox.inactive.a.bg = '#66BB99'
 custom_gruvbox.inactive.a.fg = '#222222'
 
 local inactive = function ()
-	return 'inactive'
+	return 'INACTIVE'
 end
 
 local clock = function()
